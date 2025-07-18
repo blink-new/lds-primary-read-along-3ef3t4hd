@@ -1,191 +1,220 @@
-import { Story } from '../types/Story'
+import { Story, StoryCategory } from '../types/Story';
+
+export const storyCategories: StoryCategory[] = [
+  {
+    id: 'scripture',
+    name: 'Scripture Stories',
+    description: 'Learn from the great stories in the scriptures',
+    icon: '📖',
+    color: 'bg-blue-100 text-blue-800'
+  },
+  {
+    id: 'prophet',
+    name: 'Prophet Stories',
+    description: 'Stories about modern-day prophets and pioneers',
+    icon: '⭐',
+    color: 'bg-purple-100 text-purple-800'
+  },
+  {
+    id: 'gospel',
+    name: 'Gospel Principles',
+    description: 'Learn important gospel principles through stories',
+    icon: '💝',
+    color: 'bg-pink-100 text-pink-800'
+  }
+];
 
 export const mockStories: Story[] = [
   {
-    id: 'noah-ark',
-    title: 'Noah and the Ark',
-    description: 'Learn about Noah\'s faith and obedience as he builds the ark and saves his family and the animals.',
+    id: 'noahs-ark',
+    title: "Noah's Ark",
     category: 'scripture',
     ageGroup: 'sunbeam',
-    coverImage: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop',
-    estimatedReadTime: 8,
     difficulty: 'easy',
-    content: [
+    readingTime: 5,
+    description: 'Learn about Noah and how he obeyed God by building an ark.',
+    coverImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400&h=300&fit=crop',
+    pages: [
       {
-        id: 'noah-1',
-        text: 'Long ago, there lived a righteous man named Noah. God saw that the people on earth had become wicked, but Noah was good and faithful.',
-        illustration: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop'
+        id: 1,
+        text: 'Long ago, there lived a good man named Noah. God asked Noah to build a big boat called an ark.',
+        image: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop'
       },
       {
-        id: 'noah-2',
-        text: 'God told Noah to build a great ark because He was going to send a flood to cleanse the earth. Noah listened and obeyed.',
-        illustration: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop'
+        id: 2,
+        text: 'Noah obeyed God and built the ark. He gathered two of every kind of animal to keep them safe.',
+        image: 'https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=600&h=400&fit=crop'
       },
       {
-        id: 'noah-3',
-        text: 'Noah worked hard to build the ark exactly as God commanded. He gathered his family and two of every kind of animal.',
-        illustration: 'https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=600&h=400&fit=crop'
+        id: 3,
+        text: 'It rained for many days and nights. But Noah, his family, and all the animals were safe in the ark.',
+        image: 'https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=600&h=400&fit=crop'
       },
       {
-        id: 'noah-4',
-        text: 'When the rain came, Noah and his family were safe inside the ark. After many days, God sent a rainbow as a sign of His promise.',
-        illustration: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&h=400&fit=crop'
+        id: 4,
+        text: 'When the rain stopped, God put a beautiful rainbow in the sky as a promise to Noah.',
+        image: 'https://images.unsplash.com/photo-1419833479618-c595710a1b8c?w=600&h=400&fit=crop'
       }
     ]
   },
   {
     id: 'david-goliath',
     title: 'David and Goliath',
-    description: 'Discover how young David\'s faith in God helped him defeat the giant Goliath.',
     category: 'scripture',
     ageGroup: 'ctr',
-    coverImage: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop',
-    estimatedReadTime: 6,
     difficulty: 'medium',
-    content: [
+    readingTime: 6,
+    description: 'The story of young David who trusted in God to defeat the giant Goliath.',
+    coverImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
+    pages: [
       {
-        id: 'david-1',
-        text: 'David was a young shepherd boy who loved God. He took care of his father\'s sheep in the fields.',
-        illustration: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&h=400&fit=crop'
+        id: 1,
+        text: 'David was a young shepherd boy who loved God and took care of his sheep.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
       },
       {
-        id: 'david-2',
-        text: 'A giant named Goliath challenged the army of Israel. All the soldiers were afraid of the giant.',
-        illustration: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop'
+        id: 2,
+        text: 'A giant named Goliath challenged the army of Israel. Everyone was afraid of him.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
       },
       {
-        id: 'david-3',
+        id: 3,
         text: 'David said, "I will fight Goliath because God will help me." He took his sling and five smooth stones.',
-        illustration: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop'
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
       },
       {
-        id: 'david-4',
-        text: 'With God\'s help, David defeated Goliath with just one stone. Everyone learned that God helps those who have faith.',
-        illustration: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&h=400&fit=crop'
+        id: 4,
+        text: 'With God\'s help, David defeated Goliath with just one stone. God helped David because he had faith.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
       }
     ]
   },
   {
-    id: 'joseph-smith',
-    title: 'Joseph Smith\'s First Vision',
-    description: 'Learn about the young prophet Joseph Smith and his first vision in the Sacred Grove.',
+    id: 'first-vision',
+    title: "Joseph Smith's First Vision",
     category: 'prophet',
-    ageGroup: 'valiant',
-    coverImage: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop',
-    estimatedReadTime: 10,
+    ageGroup: 'ctr',
     difficulty: 'medium',
-    content: [
+    readingTime: 7,
+    description: 'Learn about when young Joseph Smith prayed and saw Heavenly Father and Jesus Christ.',
+    coverImage: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop',
+    pages: [
       {
-        id: 'joseph-1',
-        text: 'Joseph Smith was a young boy who lived with his family in New York. He wanted to know which church was true.',
-        illustration: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop'
+        id: 1,
+        text: 'Joseph Smith was 14 years old and wanted to know which church was true.',
+        image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop'
       },
       {
-        id: 'joseph-2',
-        text: 'Joseph read in the Bible: "If any of you lack wisdom, let him ask of God." So Joseph decided to pray.',
-        illustration: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop'
+        id: 2,
+        text: 'Joseph read in the Bible that if he lacked wisdom, he should ask God.',
+        image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop'
       },
       {
-        id: 'joseph-3',
-        text: 'Joseph went to a quiet grove of trees to pray. As he knelt down, a bright light appeared above him.',
-        illustration: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop'
+        id: 3,
+        text: 'Joseph went into the woods to pray. A bright light appeared, and he saw Heavenly Father and Jesus Christ.',
+        image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop'
       },
       {
-        id: 'joseph-4',
-        text: 'Heavenly Father and Jesus Christ appeared to Joseph. They told him not to join any church because the true church would be restored.',
-        illustration: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop'
-      }
-    ]
-  },
-  {
-    id: 'kindness',
-    title: 'Being Kind to Others',
-    description: 'Learn how we can follow Jesus by being kind and helpful to everyone around us.',
-    category: 'gospel',
-    ageGroup: 'sunbeam',
-    coverImage: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop',
-    estimatedReadTime: 5,
-    difficulty: 'easy',
-    content: [
-      {
-        id: 'kindness-1',
-        text: 'Jesus taught us to be kind to everyone. When we are kind, we show love like Jesus did.',
-        illustration: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop'
-      },
-      {
-        id: 'kindness-2',
-        text: 'We can be kind by sharing our toys, helping our friends, and saying nice things to others.',
-        illustration: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop'
-      },
-      {
-        id: 'kindness-3',
-        text: 'When someone is sad, we can give them a hug or help them feel better. This makes Jesus happy.',
-        illustration: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&h=400&fit=crop'
-      },
-      {
-        id: 'kindness-4',
-        text: 'Being kind makes us feel good inside and helps others feel loved. We can choose to be kind every day.',
-        illustration: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop'
-      }
-    ]
-  },
-  {
-    id: 'prayer',
-    title: 'Learning to Pray',
-    description: 'Discover how prayer helps us talk to Heavenly Father and feel His love.',
-    category: 'gospel',
-    ageGroup: 'nursery',
-    coverImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop',
-    estimatedReadTime: 4,
-    difficulty: 'easy',
-    content: [
-      {
-        id: 'prayer-1',
-        text: 'Heavenly Father loves us very much. We can talk to Him anytime through prayer.',
-        illustration: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop'
-      },
-      {
-        id: 'prayer-2',
-        text: 'When we pray, we can thank Heavenly Father for our blessings and ask for help.',
-        illustration: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop'
-      },
-      {
-        id: 'prayer-3',
-        text: 'We can pray in the morning, before meals, and at bedtime. We can pray anytime we need help.',
-        illustration: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop'
+        id: 4,
+        text: 'They told Joseph not to join any church because the true church would be restored through him.',
+        image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop'
       }
     ]
   },
   {
     id: 'pioneer-children',
     title: 'Pioneer Children',
-    description: 'Learn about the brave pioneer children who walked across the plains to find a new home.',
     category: 'prophet',
-    ageGroup: 'ctr',
+    ageGroup: 'sunbeam',
+    difficulty: 'easy',
+    readingTime: 4,
+    description: 'Learn about the brave pioneer children who walked to Utah.',
     coverImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
-    estimatedReadTime: 7,
-    difficulty: 'medium',
-    content: [
+    pages: [
       {
-        id: 'pioneer-1',
-        text: 'Long ago, pioneer children had to leave their homes and walk many miles to find a new place to live.',
-        illustration: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
+        id: 1,
+        text: 'Long ago, pioneer children had to leave their homes and walk to a new place called Utah.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
       },
       {
-        id: 'pioneer-2',
-        text: 'The children walked and walked, pulling handcarts with all their belongings. They were very brave.',
-        illustration: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop'
+        id: 2,
+        text: 'The children walked many miles every day. They were brave and helped their families.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
       },
       {
-        id: 'pioneer-3',
-        text: 'Even when it was hard, the pioneer children sang songs and helped each other. They had strong faith.',
-        illustration: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
+        id: 3,
+        text: 'Sometimes it was hard, but they sang songs and played games to stay happy.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
       },
       {
-        id: 'pioneer-4',
-        text: 'Finally, they reached their new home in the Salt Lake Valley. They were grateful for God\'s help.',
-        illustration: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&h=400&fit=crop'
+        id: 4,
+        text: 'Finally, they reached Utah and built a new home. They were grateful for God\'s help.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
+      }
+    ]
+  },
+  {
+    id: 'being-kind',
+    title: 'Being Kind',
+    category: 'gospel',
+    ageGroup: 'nursery',
+    difficulty: 'easy',
+    readingTime: 3,
+    description: 'Learn how being kind to others makes Jesus happy.',
+    coverImage: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop',
+    pages: [
+      {
+        id: 1,
+        text: 'Jesus wants us to be kind to everyone we meet.',
+        image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop'
+      },
+      {
+        id: 2,
+        text: 'We can be kind by sharing our toys and helping our friends.',
+        image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop'
+      },
+      {
+        id: 3,
+        text: 'When we are kind, we feel happy inside and make others happy too.',
+        image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop'
+      },
+      {
+        id: 4,
+        text: 'Jesus smiles when we choose to be kind every day.',
+        image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop'
+      }
+    ]
+  },
+  {
+    id: 'learning-to-pray',
+    title: 'Learning to Pray',
+    category: 'gospel',
+    ageGroup: 'sunbeam',
+    difficulty: 'easy',
+    readingTime: 4,
+    description: 'Learn how to talk to Heavenly Father through prayer.',
+    coverImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
+    pages: [
+      {
+        id: 1,
+        text: 'Heavenly Father loves us and wants us to talk to Him through prayer.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
+      },
+      {
+        id: 2,
+        text: 'We can pray anywhere - at home, at church, or even outside in nature.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
+      },
+      {
+        id: 3,
+        text: 'We can thank Heavenly Father for our blessings and ask for help when we need it.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
+      },
+      {
+        id: 4,
+        text: 'When we pray with a sincere heart, Heavenly Father hears and answers our prayers.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
       }
     ]
   }
-]
+];
